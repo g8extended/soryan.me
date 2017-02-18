@@ -1,0 +1,26 @@
+{
+  "name": "soryan.me",
+  "version": "1.0.0",
+  "description": "soryan.me website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g8extended/soryan.me.git"
+  },
+  "keywords": [
+    "soryan",
+    "me"
+  ],
+  "author": "g8.extented",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g8extended/soryan.me/issues"
+  },
+  "homepage": "https://github.com/g8extended/soryan.me#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
