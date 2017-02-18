@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'DaysOne';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/DaysOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Economica';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/Economica-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ChauPhilomeneOne';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/ChauPhilomeneOne-Regular.ttf') format('truetype');
+}

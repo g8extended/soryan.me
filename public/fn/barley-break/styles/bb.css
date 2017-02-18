@@ -1,0 +1,216 @@
+body {
+	margin : 0;
+}
+
+body * {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+#bbg {
+	position : absolute;
+	left : 0; top : 0;
+	background-color : rgb(30,30,30);
+	font-family : Geo;
+	font-size : 50px;
+	width : 8em;
+	height : 12em;
+	margin: 0;
+	padding: 0;
+}
+
+#bbg .bbgs {
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	display : none;
+	z-index : 10;
+}
+
+#bbg .bbgs.active {
+	display : block;
+}
+
+/* screens */
+
+	/* splashScreen */
+
+	#splashScreen
+	{
+		cursor: pointer;
+	}
+
+	/* gameScreen */
+
+	#table
+   	{
+   		width:6.4em;
+   		height:6.4em;
+   		position: relative;
+   		margin-top: 0.7em;
+		margin-bottom: 0em;
+		margin-right: auto;
+		margin-left: auto;
+   	}
+
+   	#table .pebble
+   	{
+   		position: absolute;
+   		width:1.3em;
+   		line-height:1.3em;
+   		font-size:1em;
+   		border:solid 1px #559A07;
+   		font-family: 'DaysOne';
+		text-align : center;
+		color : #292e26;
+		cursor: pointer;
+
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:10px;
+
+		background: #a4ce44;
+		background: -moz-linear-gradient(top, #a4ce44 0%, #559a07 39%, #4b8706 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4ce44), color-stop(39%,#559a07), color-stop(100%,#4b8706));
+		background: -webkit-linear-gradient(top, #a4ce44 0%,#559a07 39%,#4b8706 100%);
+		background: -o-linear-gradient(top, #a4ce44 0%,#559a07 39%,#4b8706 100%);
+		background: -ms-linear-gradient(top, #a4ce44 0%,#559a07 39%,#4b8706 100%);
+		background: linear-gradient(top, #a4ce44 0%,#559a07 39%,#4b8706 100%);
+
+		text-shadow: 0px 1px 2px #E2E2E1;
+
+		-moz-box-shadow: 0px 1px 3px #559a07;
+		-webkit-box-shadow: 0px 1px 3px #559a07;
+		box-shadow: 0px 1px 3px 1px #559a07;
+
+   	}
+
+   	#table .pebble span
+   	{
+   		font-size:0.9em;
+   	}
+
+   	.bb-buttons-block
+   	{
+   		
+   	}
+
+   	.bb-button-circle
+   	{
+   		width:1.8em;
+   		line-height:1.8em;
+   		font-size:1em;
+   		border:solid 1px #e20b68;
+   		font-family: 'DaysOne';
+		text-align : center;
+		color : #8f063d;
+		cursor: pointer;
+
+		-moz-border-radius:1em;
+		-webkit-border-radius:1em;
+		border-radius:1em;
+
+		background: #f95e9a;
+		background: -moz-linear-gradient(top, #f95e9a 0%, #e20b68 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f95e9a), color-stop(100%,#e20b68));
+		background: -webkit-linear-gradient(top, #f95e9a 0%,#e20b68 100%);
+		background: -o-linear-gradient(top, #f95e9a 0%,#e20b68 100%);
+		background: -ms-linear-gradient(top, #f95e9a 0%,#e20b68 100%);
+		background: linear-gradient(top, #f95e9a 0%,#e20b68 100%);
+
+		text-shadow: 0px 1px 2px #E2E2E1;
+
+		-moz-box-shadow: 0px 1px 3px #e20b68;
+		-webkit-box-shadow: 0px 1px 3px #e20b68;
+		box-shadow: 0px 1px 3px 1px #e20b68;
+
+		margin: 0.3em auto 0;
+   	}
+
+   	.bb-button-circle span
+   	{
+   		font-size:0.5em;
+   	}
+
+/* text */
+
+	/* logo */
+
+	.logo
+	{
+		font-family: 'Just Me Again Down Here', cursive;
+		text-align : center;
+		color : #fff;
+	}
+
+	.big.logo
+	{
+		font-size : 2.5em;
+		line-height : 0.9em;
+		margin : 1.1em 0 0;
+	}
+
+	.small.logo
+	{
+		font-size: 1.0em;
+		line-height: 0.9em;
+		margin: 0.3em 0 0;
+	}
+
+	/* logo */
+
+	.instructions
+	{
+		font-family: 'Just Me Again Down Here', cursive;
+		text-align : center;
+		color : #777;
+		font-size: 1.0em;
+		margin: 0.3em 0 0;
+	}
+
+/* menu */
+
+.menu
+{
+	margin: 0.5em 0 0;
+	padding: 0;
+}
+
+.menu .menubutton
+{
+	margin-top: 0.7em;
+	margin-bottom: 0em;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	border-top:solid 1px #ffffff;
+	border-bottom:solid 1px #ffffff;
+	border-left:solid 1px #ffffff;
+	border-right:solid 1px #ffffff;
+	width:4em;
+	color:#ffffff;
+	font-family: 'Just Me Again Down Here', cursive;
+	border-radius:0.3em;
+	text-align:center;
+	cursor: pointer;
+}
+
+.menu .menubutton:hover
+{
+	border-top:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+	border-left:solid 1px #cccccc;
+	border-right:solid 1px #cccccc;
+
+	color:#cccccc;
+}
+
