@@ -1,0 +1,361 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style type="text/css">
+
+	body
+	{
+		background-color: #d8d8d8;
+	}
+
+	.screen
+	{
+		position: fixed;
+		top:180px;
+		left:50px;
+		right:50px;
+		bottom:50px;
+		box-shadow:1px 2px 7px #777 inset;
+		background-color: #EAEAEA;
+	}
+
+	.wheel
+	{
+		height:150px;
+		width:150px;
+		border-radius:75px;
+		border:solid 1px #ccc;
+
+		background-color: #dbdbdb;
+
+		box-shadow:0px 6px 10px #888, 0px 2px 5px #fff inset;
+
+		cursor:pointer;
+
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select:none
+		user-select: none;
+
+		position: absolute;
+
+		
+
+	}
+
+	.horWheel
+	{
+		top: 10px;
+		left:50px;
+	}
+
+	.verWheel
+	{
+		top: 10px;
+		left:250px;
+	}
+
+	.wheelpoint
+	{
+		height:16px;
+		width:16px;
+		border-radius:8px;
+		border:solid 1px #ccc;
+
+		background-color: #dcdcdc;
+
+		box-shadow:0px 1px 1px #ccc, 0px 2px 5px #fff inset;
+
+		cursor:pointer;
+
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select:none
+		user-select: none;
+	}
+
+	.wheel .block
+	{
+		width:16px;
+		height:140px;
+		position: relative;
+		margin-left:-8px;
+		left:50%;
+		top:50%;
+		margin-top:-70px;
+	}
+
+	div.line
+	{
+		position: absolute;
+	}
+
+	ul.color
+	{
+		height:20px;
+		padding: 0px;
+		list-style-type: none;
+		position: fixed;
+		left:50px;
+		bottom:15px;
+		margin: 0px;
+	}
+
+	ul.color li
+	{
+		width:20px;
+		height:20px;
+		display: inline-block;
+		margin-right:3px;
+		box-shadow: 1px 1px 1px #999 inset, -1px -1px 1px #ccc inset;
+		border-radius:3px;
+		cursor: pointer;
+	}
+
+	.clear
+	{
+		height:25px;
+		padding: 0px;
+		position: fixed;
+		right:50px;
+		bottom:15px;
+		margin: 0px;
+		width:100px;
+		border:solid 1px #999;
+		cursor: pointer;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="screen"></div>
+
+	<div class="wheel horWheel">
+		<div class="block">
+			<div class="wheelpoint"></div>
+			<div class="image"></div>
+		</div>
+	</div>
+
+	<div class="wheel verWheel">
+		<div class="block">
+			<div class="wheelpoint"></div>
+			<div class="image"></div>
+		</div>
+	</div>
+
+	<ul class="color">
+		<li data-color="#EAEAEA"></li>
+		<li data-color="#000"></li>
+		<li data-color="#fff"></li>
+		<li data-color="#eb0000"></li>
+		<li data-color="#ebe300"></li>
+		<li data-color="#03d117"></li>
+		<li data-color="#03cad1"></li>
+	</ul>
+
+	<button class='clear'>clear</button>
+
+		<script type="text/javascript">
+			var h_gengr = 0, h_gr1 = 0, h_g2 = 0,
+				v_gengr = 0, v_gr1 = 0, v_g2 = 0,
+				delta,
+				curX = 200, curY = 300,
+				isHorWheelTouch = false,
+				isVerWheelTouch = false,
+				width = window.innerWidth,
+				height = window.innerHeight,
+				color = '#eb0000';
+
+			function grad(e, trend)
+			{
+				var gr = 0;
+					
+					if (trend == "side")
+					{
+						YY = e.clientY - 10;
+	  					XX = e.clientX - 50;
+		  			}
+		  			else
+		  			{
+						YY = e.clientY - 10;
+	  					XX = e.clientX - 250;
+		  			}
+
+	  				if (YY>75)
+	  				{
+	  					// y > 75 && x > 75  (II)
+	  					if (XX > 75)
+	  					{
+	  						x = XX - 75;
+		  					y = YY - 75;
+		  					tg = x / y;
+		  					gr =  180 + Math.atan(-tg)*180/3.14159265358979328;
+		  				}
+		  				// y > 75 && x > 75  (III)
+		  				else
+		  				{
+		  					x = 75 - XX;
+		  					y = YY - 75;
+		  					tg = x / y;
+		  					gr = 180 + Math.atan(tg)*180/3.14159265358979328;
+		  				}
+	  				}
+	  				else
+	  				{
+	  					// y < 75 && x > 75  (I)
+	  					if (XX > 75)
+	  					{
+	  						x = XX - 75;
+		  					y = 75 - YY;
+		  					tg = x / y;
+		  					gr = Math.atan(tg)*180/3.14159265358979328;
+		  				}
+		  				// y < 75 && x < 75  (IV)
+		  				else
+		  				{
+		  					x = 75 - XX;
+		  					y = 75 - YY;
+		  					tg = x / y;
+		  					gr = 360 + Math.atan(-tg)*180/3.14159265358979328;
+		  				}
+		  			}
+			  	return  gr;
+			}
+
+  			(function($){
+
+  				$('.color').find('li').each(function(el){
+  					$(this).css('background-color', $(this).data('color'));
+  				})
+  				.end()
+  				.on('click', 'li', function(){
+  					color = $(this).data('color');
+  				});
+
+  				$('.clear').on('click', function(){
+  					$('.line').remove();
+  				})
+
+
+  				$('.horWheel')
+  				.on('mousedown', function(e){
+  					isHorWheelTouch = true;
+  					h_gr1 = grad(e, "side");
+
+  				})
+  				.on('mouseup', function(e){
+  					isHorWheelTouch = false;
+  				})
+  				.on('mouseleave', function(e){
+  					isHorWheelTouch = false;
+  				})
+  				.on('mousemove', function(e){
+	  				if(isHorWheelTouch)
+	  				{
+	  					h_gr2 = grad(e, "side");
+	  					delta = h_gr2 - h_gr1;
+	  					if (delta < -300)
+	  					    delta = 1;
+	  					if (delta > 300)
+	  					    delta = -1;
+
+	  					//console.log(delta);
+	  					h_gengr = (h_gengr + delta) % 360;
+	  					h_gr1 = h_gr2;
+		  				$(this).find('.block')
+		  					.css("-webkit-transform", "rotate("+h_gengr+"deg)")
+		  					.css("-moz-transform", "rotate("+h_gengr+"deg)")
+		  					.css("-o-transform", "rotate("+h_gengr+"deg)")
+		  					.css("-ms-transform", "rotate("+h_gengr+"deg)")
+
+		  				lenght = Math.round(delta);
+
+		  				if (lenght > 0)
+						{
+							
+							if ((curX + lenght) < ( width - 60))
+							{
+								style = 'width:'+lenght+'px; top:'+curY+'px; left:'+curX+'px; height:1px; background-color:'+color+';';
+								curX =  curX + lenght;
+							}
+						}
+						else
+						{
+							lenght = - lenght;
+							if ((curX - lenght) > (60))
+							{
+							style = 'width:'+lenght+'px; top:'+curY+'px; left:'+(curX - lenght)+'px; height:1px; background-color:'+color+';';
+								curX = curX - lenght;
+						}
+						}
+
+						$("<div>", {'class':'line'}).attr('style', style ).appendTo($('body'));
+
+					}
+  				});
+
+  				$('.verWheel')
+  				.on('mousedown', function(e){
+  					isVerWheelTouch = true;
+  					v_gr1 = grad(e, "up");
+
+  				})
+  				.on('mouseup', function(e){
+  					isVerWheelTouch = false;
+  				})
+  				.on('mouseleave', function(e){
+  					isVerWheelTouch = false;
+  				})
+  				.on('mousemove', function(e){
+	  				if(isVerWheelTouch)
+	  				{
+	  					v_gr2 = grad(e, "up");
+	  					delta = v_gr2 - v_gr1;
+	  					if (delta < -300)
+	  					    delta = 1;
+	  					if (delta > 300)
+	  					    delta = -1;
+
+	  					v_gengr = (v_gengr + delta) % 360;
+	  					v_gr1 = v_gr2;
+		  				$(this).find('.block')
+		  					.css("-webkit-transform", "rotate("+v_gengr+"deg)")
+		  					.css("-moz-transform", "rotate("+v_gengr+"deg)")
+		  					.css("-o-transform", "rotate("+v_gengr+"deg)")
+		  					.css("-ms-transform", "rotate("+v_gengr+"deg)")
+
+		  				lenght = Math.round(delta);
+
+						if (lenght > 0)
+						{
+							if ((curY + lenght) < ( height - 60))
+							{
+								style = 'width:1px; top:'+curY+'px; left:'+curX+'px; height:'+lenght+'px; background-color:'+color+';';
+								curY = curY + lenght;
+							}
+						}
+						else
+						{
+							lenght = - lenght;
+
+							if ((curY - lenght) > ( 195))
+							{
+								style = 'width:1px; top:'+(curY - lenght)+'px; left:'+curX+'px; height:'+ lenght+'px; background-color:'+color+';';
+								curY = curY - lenght;
+							}
+
+						}
+						$("<div>", {'class':'line'}).attr('style', style ).appendTo($('body'));
+					}
+  				});
+
+
+  			})(jQuery)
+		</script>
+</body>
+</html>
