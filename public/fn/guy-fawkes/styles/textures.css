@@ -1,0 +1,40 @@
+.sw-character.sw-guy-fawkes .sw-head > * {
+  background-size: 672px 116px; }
+.sw-character.sw-guy-fawkes .sw-head .sw-face {
+  background: url("../textures/Vendetta/head.png") 336px 0px; }
+.sw-character.sw-guy-fawkes .sw-head .sw-occiput {
+  background: url("../textures/Vendetta/head.png") 0px -8px; }
+.sw-character.sw-guy-fawkes .sw-head .sw-right-temple {
+  background: url("../textures/Vendetta/head.png") 504px 0px; }
+.sw-character.sw-guy-fawkes .sw-head .sw-left-temple {
+  background: url("../textures/Vendetta/head.png") 168px 0px; }
+.sw-character.sw-guy-fawkes .sw-body > * {
+  background-size: 432px 80px; }
+.sw-character.sw-guy-fawkes .sw-body .sw-chest {
+  background: url("../textures/Vendetta/body.png") 216px 0px; }
+.sw-character.sw-guy-fawkes .sw-body .sw-back {
+  background: url("../textures/Vendetta/body.png") 0px -1px; }
+.sw-character.sw-guy-fawkes .sw-body .sw-right-side {
+  background: url("../textures/Vendetta/body.png") 324px 0px; }
+.sw-character.sw-guy-fawkes .sw-body .sw-left-side {
+  background: url("../textures/Vendetta/body.png") 108px 0px; }
+.sw-character.sw-guy-fawkes .sw-legs > * {
+  background-size: 320px 80px; }
+.sw-character.sw-guy-fawkes .sw-legs .sw-top-side {
+  background: url("../textures/Vendetta/legs.png") 160px 45px; }
+.sw-character.sw-guy-fawkes .sw-legs .sw-right-side {
+  background: url("../textures/Vendetta/legs.png") 80px -21px; }
+.sw-character.sw-guy-fawkes .sw-legs .sw-back-side {
+  background: url("../textures/Vendetta/legs.png") 0px -21px; }
+.sw-character.sw-guy-fawkes .sw-legs .sw-left-side {
+  background: url("../textures/Vendetta/legs.png") 240px -21px; }
+.sw-character.sw-guy-fawkes .sw-hands * {
+  background: url("../textures/Vendetta/hand.png"); }
+.sw-character.sw-guy-fawkes .sw-hands .sw-bottom-side {
+  background: url("../textures/Vendetta/fingers.png"); }
+.sw-character.sw-guy-fawkes .sw-hat > * {
+  background: url("../textures/Vendetta/hat.png"); }
+.sw-character.sw-guy-fawkes .sw-hat .sw-bottom-side {
+  background: url("../textures/Vendetta/hat-button.png"); }
+.sw-character.sw-guy-fawkes .sw-hat .sw-top-side {
+  background: url("../textures/Vendetta/hat-top.png"); }

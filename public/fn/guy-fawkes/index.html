@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styles/model.css">
+	<link rel="stylesheet" href="styles/textures.css">
+	<link rel="stylesheet" href="styles/animation.css">
+</head>
+<body>
+
+	<div id='sw-guy-fawkes' class="sw-character sw-guy-fawkes">
+		<div class="sw-head">
+			<div class="sw-top-side"></div>
+			<div class="sw-bottom-side"></div>
+			<div class="sw-face"></div>
+			<div class="sw-occiput"></div>
+			<div class="sw-right-temple"></div>
+			<div class="sw-left-temple"></div>
+		</div>
+		<div class="sw-body">
+			<div class="sw-bottom-side"></div>
+			<div class="sw-chest"></div>
+			<div class="sw-back"></div>
+			<div class="sw-right-side"></div>
+			<div class="sw-left-side"></div>
+		</div>
+		<div class="sw-hands">
+			<div class="sw-right-hand">
+				<div class="sw-top-side"></div>
+				<div class="sw-bottom-side"></div>
+				<div class="sw-forward-side"></div>
+				<div class="sw-back-side"></div>
+				<div class="sw-right-side"></div>
+				<div class="sw-left-side"></div>
+			</div>
+			<div class="sw-left-hand">
+				<div class="sw-top-side"></div>
+				<div class="sw-bottom-side"></div>
+				<div class="sw-forward-side"></div>
+				<div class="sw-back-side"></div>
+				<div class="sw-right-side"></div>
+				<div class="sw-left-side"></div>
+			</div>
+		</div>
+		<div class="sw-legs">
+			<div class="sw-top-side"></div>
+			<div class="sw-back-side"></div>
+			<div class="sw-right-side"></div>
+			<div class="sw-left-side"></div>
+		</div>
+
+		<!-- Add part -->
+		<div class="sw-hat">
+			<div class="sw-top-side"></div>
+			<div class="sw-bottom-side"></div>
+			<div class="sw-forward-side"></div>
+			<div class="sw-back-side"></div>
+			<div class="sw-right-side"></div>
+			<div class="sw-left-side"></div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		(function(){
+			// var element = document.getElementById('sw-character'),
+			// 	hgrad = 70,
+			// 	vgrad = 45;
+			// document.body.onkeydown = function(e){
+			// 	(e.keyCode == 37) && vgrad--;
+			// 	(e.keyCode == 39) && vgrad++;
+			// 	(e.keyCode == 38) && hgrad--;
+			// 	(e.keyCode == 40) && hgrad++;
+			// 	element.style['-webkit-transform'] = 'rotateX('+(hgrad % 360)+'deg) rotateZ('+(vgrad % 360)+'deg)';
+			// };
+
+			var V = document.getElementById('sw-guy-fawkes');
+			
+			V.className = "sw-character sw-guy-fawkes start";
+			
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes coming";
+			},1500);
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes talking";
+			},4500)
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes fighting";
+			},17000)
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes";
+			},22000)
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes moretalking";
+			},23000)
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes";
+			},33000)
+
+			setTimeout(function(){
+				V.className = "sw-character sw-guy-fawkes v";
+			},34000)
+		})()
+	</script>
+
+</body>
+</html>
