@@ -12,4 +12,4 @@ cd soryan.me
 npm i
 npm run start
 ```
-
+ 
