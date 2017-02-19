@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>building | alexeionline. front-end developer</title>
+	<link rel="stylesheet" href="styles/building.css">
+	<meta name="author" content="alexeionline" />
+</head>
+<body>
+	<div class="building" id='building'>
+		<div class="floor"></div>
+		<div class="roof"></div>
+		<div class="sside"></div>
+		<div class="nside"></div>
+		<div class="wside"></div>
+		<div class="eside"></div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var element = document.getElementById('building'),
+				hgrad = 70,
+				vgrad = 45;
+			document.body.onkeydown = function(e){
+				(e.keyCode == 37) && vgrad--;
+				(e.keyCode == 39) && vgrad++;
+				(e.keyCode == 38) && hgrad--;
+				(e.keyCode == 40) && hgrad++;
+				element.style['-webkit-transform'] = 'rotateX('+(hgrad % 360)+'deg) rotateZ('+(vgrad % 360)+'deg)';
+			};
+		})()
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.building {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0px 0px -100px;
+  padding: 100px;
+  -webkit-transform: rotateX(70deg) rotateZ(45deg);
+  background: url("../images/grass.jpg");
+  background-size: 300px 300px;
+  -webkit-transform-origin: 50% 50% 50px;
+  -webkit-perspective: 1000;
+  -webkit-transform-style: preserve-3d; }
+  .building > * {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    background: url("../images/wall.png");
+    background-size: 200px 100px; }
+  .building .roof {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 100px);
+    -webkit-transform-origin: 0 100% 0;
+    background: url("../images/wall.png") 100px 0; }
+  .building .wside {
+    -webkit-transform: rotateX(-90deg) rotateY(-90deg) rotateZ(0deg) translate3d(-100px, 0px, 0px);
+    -webkit-transform-origin: 0 100% 0; }
+  .building .sside {
+    -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+    -webkit-transform-origin: 0 100% 0; }
+  .building .eside {
+    -webkit-transform: rotateY(90deg) rotateZ(-90deg) translate3d(0, 0, 100px);
+    -webkit-transform-origin: 0 100% 0; }
+  .building .nside {
+    -webkit-transform: rotateX(-90deg) rotateY(180deg) translate3d(-100px, 0px, 100px);
+    -webkit-transform-origin: 0 100% 0; }
