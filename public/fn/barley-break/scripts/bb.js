@@ -4,6 +4,19 @@
 		screens : {}
 	};
 
+	function checking() {
+		var checkarr = [];
+		$('#table').find('.pebble').each(function(el){
+			$this = $(this);
+			checkarr.push($this.data('position'));
+		});
+
+		if (checkarr.join('') == "01234567")
+			return true;
+		else
+			return false;
+	}
+
 	$.extend($.bb.screens, {
 		'splashScreen' : {
 			'run' : function(){
