@@ -13,4 +13,3 @@ npm i
 npm run start
 ```
 
-Add jenkins 4
