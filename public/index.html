@@ -4,33 +4,66 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Soryan.me</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style type="text/css">
-        #page-wrap {
-            margin: 0 auto;
-            width: 90%;
+        * {
+            padding:0;
+            margin: 0;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #2C2F36;
+        }
+
+        #page-wrap img {
+            max-width: 100%;
+            position: fixed;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width:100%;
+            background-color: #2C2F36;
+        }
+            
+        .footer ul {
+            width: 70%;
+            margin: 2em auto;
+        }
+
+        .footer li {
+            display: inline-block;
+            width:25%;
             text-align: center;
+            font-size: .7em;
+            vertical-align: middle;
         }
-        #page-wrap footer {
-            text-align: left;
+
+        .footer li h1 {
+            font-size: 1.2em;
+            font-weight: 100;
         }
-        .img-index-center {
-            max-width: 50%;
-            max-height: 50%;
-        }
+
     </style>
 </head>
 <body>
     <div id="page-wrap">
-        <div class="content">
+        <img src="photo.jpg">
+        <img src="bubble.png">
+    </div>
+    <div class="footer">
+        <ul><li>
             <h1>Soryan.me</h1>
-            <div>
-                <img src="soryan_index.jpg" class="img-index-center">
-            </div>
-            <h2>developed by g8.extended</h2>
-        </div>
-        <footer>
-            <p>sponsored by <a href="https://vk.com/llamaktus">llamaktus</a></p>
-        </footer>
+        </li><li>
+            sponsored by <a href="https://vk.com/llamaktus" target="_blank">llamaktus</a>
+        </li><li>
+            design by Kavoon
+        </li><li>
+            developed by g8.extended
+        </li></ul>
     </div>
 </body>
 </html>
