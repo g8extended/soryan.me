@@ -15,11 +15,16 @@
 
         body {
             background-color: #b5b4b0;
+            height: 100vh;
         }
 
-        #page-wrap img {
-            max-width: 100%;
-            position: fixed;
+        #page-wrap {
+            background-image: url('photo.jpg');
+            width: 100%;
+            height: calc(100% - 85px);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: bottom center;
         }
 
         .footer {
@@ -73,10 +78,7 @@
     </style>
 </head>
 <body>
-    <div id="page-wrap">
-        <img src="photo.jpg">
-        <img src="bubble.png">
-    </div>
+    <div id="page-wrap"></div>
     <div class="footer">
         <ul><li>
             <h1>Soryan.me</h1>
