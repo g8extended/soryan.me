@@ -4,7 +4,7 @@
   "description": "soryan.me website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "forever node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,6 @@
   "homepage": "https://github.com/g8extended/soryan.me#readme",
   "dependencies": {
     "express": "^4.14.1"
-  }
+  },
+  "devDependencies": {}
 }
