@@ -49,13 +49,14 @@
         }
 
         .footer .anchors {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
             width: 70%;
             margin: 2em auto;
         }
 
         .footer .anchor {
-            display: inline-block;
-            width: 25%;
             text-align: center;
             font-size: .7em;
             vertical-align: middle;
@@ -66,7 +67,10 @@
         }
 
         .developed a:hover .team {
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            list-style: none;
         }
 
         .developed .team {
@@ -123,23 +127,40 @@
 <body>
 <div id="page-wrap"></div>
 <div class="footer">
-    <ul class="anchors"><li class="anchor">
+    <ul class="anchors">
+        <li class="anchor">
             <h1>Soryan.me</h1>
-        </li><li class="anchor">
-            <span>sponsored by</span> <a href="https://vk.com/llamaktus" target="_blank">llamaktus</a>
-        </li><li class="anchor">
-            <span>design by</span> <a href="https://creativemarket.com/kavoon" target="_blank">Kavoon</a>
-        </li><li class="anchor developed">
-            <span>developed by</span> <a href="https://github.com/g8extended" target="_blank">g8.extended
-            <ul class="team"><li class="member"><img src="team/1.png" alt="boris"></li><li class="member"><img src="team/2.png" alt="denis"></li><li class="member"><img src="team/3.png" alt="pel"></li><li class="member"><img src="team/4.png" alt="pvgrad"></li><li class="member"><img src="team/5.png" alt="seva"></li><li class="member"><img src="team/6.png" alt="alien"></li><li class="member"><img src="team/7.png" alt="eugene"></li><li class="member"><img src="team/8.png" alt="alexei"></li></ul>
-        </a>
-    </li></ul>
+        </li>
+        <li class="anchor">
+            <span>sponsored by</span>
+            <a href="https://vk.com/llamaktus" target="_blank">llamaktus</a>
+        </li>
+        <li class="anchor">
+            <span>design by</span>
+            <a href="https://creativemarket.com/kavoon" target="_blank">Kavoon</a>
+        </li>
+        <li class="anchor developed">
+            <span>developed by</span>
+            <a href="https://github.com/g8extended" target="_blank">g8.extended
+                <ul class="team">
+                    <li class="member"><img src="team/1.png" alt="boris"></li>
+                    <li class="member"><img src="team/2.png" alt="denis"></li>
+                    <li class="member"><img src="team/3.png" alt="pel"></li>
+                    <li class="member"><img src="team/4.png" alt="pvgrad"></li>
+                    <li class="member"><img src="team/5.png" alt="seva"></li>
+                    <li class="member"><img src="team/6.png" alt="alien"></li>
+                    <li class="member"><img src="team/7.png" alt="eugene"></li>
+                    <li class="member"><img src="team/8.png" alt="alexei"></li>
+                </ul>
+            </a>
+        </li>
+    </ul>
 </div>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
-var sc_project=11270278; 
-var sc_invisible=1; 
-var sc_security="6d9bbc25"; 
+var sc_project=11270278;
+var sc_invisible=1;
+var sc_security="6d9bbc25";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
