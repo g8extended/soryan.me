@@ -2,6 +2,7 @@
 <html prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Soryan.me</title>
     <meta name="description" content="Soryan me - instead of a thousand words">
@@ -42,7 +43,6 @@
 
         .footer {
             position: fixed;
-            height: 5em;
             bottom: 0;
             width: 100%;
             background-color: #2C2F36;
@@ -51,14 +51,16 @@
         .footer .anchors {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             list-style: none;
             width: 70%;
-            margin: 2em auto;
+            margin: 1em auto;
         }
 
         .footer .anchor {
+            width: 100%;
             text-align: center;
-            font-size: .7em;
+            font-size: 1.2em;
             vertical-align: middle;
         }
 
@@ -120,6 +122,26 @@
 
             .footer .anchor span {
                 display: none;
+            }
+        }
+
+        @media (min-width: 480px) {
+            .footer .anchors {
+                margin: 1.4em auto;
+            }
+            .footer .anchor {
+                font-size: 1em;
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .footer .anchors {
+                margin: 2em auto;
+            }
+            .footer .anchor {
+                font-size: .7em;
+                width: 25%;
             }
         }
     </style>
